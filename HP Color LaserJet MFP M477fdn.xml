@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>6.0</version>
+    <date>2022-04-28T07:16:55Z</date>
+    <groups>
+        <group>
+            <uuid>e40dc5c700014dddb839e76ca87f150c</uuid>
+            <name>Templates/Printer</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <uuid>1d07ca024e87455cb52a1b0332e15859</uuid>
+            <template>Printer HP Color LaserJet MFP M477fdn</template>
+            <name>Printer HP Color LaserJet MFP M477fdn</name>
+            <groups>
+                <group>
+                    <name>Templates/Printer</name>
+                </group>
+            </groups>
+            <items>
+                <item>
+                    <uuid>3a765a7ff688492d927a024f5c5b85d3</uuid>
+                    <name>Серийный номер</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.2.1.43.5.1.1.17.1</snmp_oid>
+                    <key>mib-2.43.5.1.1.17.1</key>
+                    <delay>1d</delay>
+                    <history>365d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Printer</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>3c29a61adc3c49979b7f3c117675a06b</uuid>
+                    <name>Всего напечатано страниц</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.2.1.43.10.2.1.4.1.1</snmp_oid>
+                    <key>mib-2.43.10.2.1.4.1.1</key>
+                    <delay>1h</delay>
+                    <history>30d</history>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Printer</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>aabcde30c4694683b1601781a7771841</uuid>
+                    <name>Название картриджа</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.2.1.43.11.1.1.6.1.1</snmp_oid>
+                    <key>mib-2.43.11.1.1.6.1.1</key>
+                    <delay>1d</delay>
+                    <history>365d</history>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Printer</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>8d2703304ab84d7ab3bf5f3a4f4e341d</uuid>
+                    <name>Черный картридж HP CF410X</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.2.1.43.11.1.1.9.1.1</snmp_oid>
+                    <key>mib-2.43.11.1.1.9.1.1</key>
+                    <delay>10m</delay>
+                    <history>30d</history>
+                    <units>%</units>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Printer</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>92300c7ed4a24f38baedd682fdab23e6</uuid>
+                            <expression>last(/Printer HP Color LaserJet MFP M477fdn/mib-2.43.11.1.1.9.1.1,#1)&lt;10</expression>
+                            <name>Уровень черного тонера меньше 10% на {HOST.NAME}</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>c7e828c800b2429eb09126acbbfda760</uuid>
+                    <name>Голубой картридж HP CF411A</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.2.1.43.11.1.1.9.1.2</snmp_oid>
+                    <key>mib-2.43.11.1.1.9.1.2</key>
+                    <delay>10m</delay>
+                    <history>30d</history>
+                    <units>%</units>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Printer</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>dee63c998bf44bf487e6fc48788a97dd</uuid>
+                            <expression>last(/Printer HP Color LaserJet MFP M477fdn/mib-2.43.11.1.1.9.1.2,#1)&lt;10</expression>
+                            <name>Уровень голубого тонера меньше 10% на {HOST.NAME}</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>37cfa588e7634d23baec7e7d82cfe13c</uuid>
+                    <name>Пурпурный картридж HP CF413A</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.2.1.43.11.1.1.9.1.3</snmp_oid>
+                    <key>mib-2.43.11.1.1.9.1.3</key>
+                    <delay>10m</delay>
+                    <history>30d</history>
+                    <units>%</units>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Printer</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>b5ff2627bfcd4c48b28b9c4de9e58d3d</uuid>
+                            <expression>last(/Printer HP Color LaserJet MFP M477fdn/mib-2.43.11.1.1.9.1.3,#1)&lt;10</expression>
+                            <name>Уровень пурпурного тонера меньше 10% на {HOST.NAME}</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>a520b04d03014d0195f986a09be3f8d9</uuid>
+                    <name>Желтый картридж HP CF412A</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.2.1.43.11.1.1.9.1.4</snmp_oid>
+                    <key>mib-2.43.11.1.1.9.1.4</key>
+                    <delay>10m</delay>
+                    <history>30d</history>
+                    <units>%</units>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>Printer</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>738f5ec9c1704933b498e7409bfc9f60</uuid>
+                            <expression>last(/Printer HP Color LaserJet MFP M477fdn/mib-2.43.11.1.1.9.1.4,#1)&lt;10</expression>
+                            <name>Уровень желтого тонера меньше 10% на {HOST.NAME}</name>
+                            <priority>WARNING</priority>
+                            <manual_close>YES</manual_close>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <dashboards>
+                <dashboard>
+                    <uuid>e8654ce2851d490291baa08766419a8c</uuid>
+                    <name>Printer information</name>
+                    <pages>
+                        <page>
+                            <widgets>
+                                <widget>
+                                    <type>GRAPH_CLASSIC</type>
+                                    <width>12</width>
+                                    <height>5</height>
+                                    <fields>
+                                        <field>
+                                            <type>GRAPH</type>
+                                            <name>graphid</name>
+                                            <value>
+                                                <name>Черный тонер</name>
+                                                <host>Printer HP Color LaserJet MFP M477fdn</host>
+                                            </value>
+                                        </field>
+                                    </fields>
+                                </widget>
+                                <widget>
+                                    <type>GRAPH_CLASSIC</type>
+                                    <x>12</x>
+                                    <width>12</width>
+                                    <height>5</height>
+                                    <fields>
+                                        <field>
+                                            <type>GRAPH</type>
+                                            <name>graphid</name>
+                                            <value>
+                                                <name>Голубой тонер</name>
+                                                <host>Printer HP Color LaserJet MFP M477fdn</host>
+                                            </value>
+                                        </field>
+                                    </fields>
+                                </widget>
+                                <widget>
+                                    <type>GRAPH_CLASSIC</type>
+                                    <y>5</y>
+                                    <width>12</width>
+                                    <height>5</height>
+                                    <fields>
+                                        <field>
+                                            <type>GRAPH</type>
+                                            <name>graphid</name>
+                                            <value>
+                                                <name>Желтый тонер</name>
+                                                <host>Printer HP Color LaserJet MFP M477fdn</host>
+                                            </value>
+                                        </field>
+                                    </fields>
+                                </widget>
+                                <widget>
+                                    <type>GRAPH_CLASSIC</type>
+                                    <x>12</x>
+                                    <y>5</y>
+                                    <width>12</width>
+                                    <height>5</height>
+                                    <fields>
+                                        <field>
+                                            <type>GRAPH</type>
+                                            <name>graphid</name>
+                                            <value>
+                                                <name>Пурпурный тонер</name>
+                                                <host>Printer HP Color LaserJet MFP M477fdn</host>
+                                            </value>
+                                        </field>
+                                    </fields>
+                                </widget>
+                            </widgets>
+                        </page>
+                    </pages>
+                </dashboard>
+            </dashboards>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <uuid>cafc4bff8d834d5193cb68f6d9b31e5e</uuid>
+            <name>Всего напечатано страниц</name>
+            <show_triggers>NO</show_triggers>
+            <graph_items>
+                <graph_item>
+                    <drawtype>FILLED_REGION</drawtype>
+                    <color>787878</color>
+                    <item>
+                        <host>Printer HP Color LaserJet MFP M477fdn</host>
+                        <key>mib-2.43.10.2.1.4.1.1</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <uuid>172f4c382b944f549ba05d070e058b5e</uuid>
+            <name>Голубой тонер</name>
+            <show_triggers>NO</show_triggers>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <ymax_type_1>FIXED</ymax_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>FILLED_REGION</drawtype>
+                    <color>00FFFF</color>
+                    <item>
+                        <host>Printer HP Color LaserJet MFP M477fdn</host>
+                        <key>mib-2.43.11.1.1.9.1.2</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <uuid>07d063a5727f44b4bc5e62d9e5d3dafe</uuid>
+            <name>Желтый тонер</name>
+            <show_triggers>NO</show_triggers>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <ymax_type_1>FIXED</ymax_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>FILLED_REGION</drawtype>
+                    <color>FFFF00</color>
+                    <item>
+                        <host>Printer HP Color LaserJet MFP M477fdn</host>
+                        <key>mib-2.43.11.1.1.9.1.4</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <uuid>a46a0aa2ab7d4fed8b25e639e0786114</uuid>
+            <name>Пурпурный тонер</name>
+            <show_triggers>NO</show_triggers>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <ymax_type_1>FIXED</ymax_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>FILLED_REGION</drawtype>
+                    <color>FF00FF</color>
+                    <item>
+                        <host>Printer HP Color LaserJet MFP M477fdn</host>
+                        <key>mib-2.43.11.1.1.9.1.3</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <uuid>d17361ac1a1f4b23b46d35d97e04729f</uuid>
+            <name>Черный тонер</name>
+            <show_triggers>NO</show_triggers>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <ymax_type_1>FIXED</ymax_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>FILLED_REGION</drawtype>
+                    <color>000000</color>
+                    <item>
+                        <host>Printer HP Color LaserJet MFP M477fdn</host>
+                        <key>mib-2.43.11.1.1.9.1.1</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>
